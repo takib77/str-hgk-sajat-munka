@@ -1,0 +1,7 @@
+A beépített fs modul fájlműveletek végzésére alkalmas, ennek használatához először importálnunk kell.
+Ilyen esetben elég beírni a nevét, automatikusan betöltődik a node_modules mappából, hiszen nem saját
+fájlról van szó.
+
+A fájl tartalmának beolvasásához az fs.readFileSync() metódust használjuk: az options-ben megadhatjuk
+az encoding-ot (hogy a kimenetet megfelelően lássuk), a flag segítségével pedig azt, hogy hogyan
+szeretnénk megnyitni.
