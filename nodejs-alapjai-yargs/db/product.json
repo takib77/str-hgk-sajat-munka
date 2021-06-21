@@ -1,0 +1,64 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Bread - Rolls, Corn",
+            "price": 1886,
+            "count": 87
+        },
+        {
+            "id": 2,
+            "name": "Liners - Banana, Paper",
+            "price": 7069,
+            "count": 67
+        },
+        {
+            "id": 3,
+            "name": "Samosa - Veg",
+            "price": 2466,
+            "count": 46
+        },
+        {
+            "id": 4,
+            "name": "Wine - Barossa Valley Estate",
+            "price": 5156,
+            "count": 44
+        },
+        {
+            "id": 5,
+            "name": "Eggplant - Asian",
+            "price": 7924,
+            "count": 11
+        },
+        {
+            "id": 6,
+            "name": "Potato - Sweet",
+            "price": 7661,
+            "count": 86
+        },
+        {
+            "id": 7,
+            "name": "Cheese - Comtomme",
+            "price": 4211,
+            "count": 96
+        },
+        {
+            "id": 8,
+            "name": "Bread - Italian Sesame Poly",
+            "price": 1521,
+            "count": 7
+        },
+        {
+            "id": 9,
+            "name": "Raisin - Golden",
+            "price": 5135,
+            "count": 6
+        },
+        {
+            "id": 10,
+            "name": "Beans - Black Bean, Dry",
+            "price": 3949,
+            "count": 86
+        }
+    ]
+}
