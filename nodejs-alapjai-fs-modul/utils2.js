@@ -6,15 +6,12 @@
 // Ennek a fájlnak a tartalmát egy gz fájlba becsomagoljuk be.
 // Amennyiben a minden művelet sikeres volt, az eredeti fájlt és a .bak fájlt is töröljük ki!
 
-const { createReadStream, createWriteStream, readFile, unlink } = require('fs')
+const { createReadStream, createWriteStream } = require('fs')
+const { unlink } = require('fs').promises
 const { createGzip } = require('zlib')
 
 const archiveFile = (file) => {
-    const readableStream = createReadStream(file, {
-        encoding: 'utf-8',
-        highWaterMark: 13
-    })
-
+    const readableStream = createReadStream(file, { encoding: 'utf-8' })
     const writeableStream = createWriteStream(`${file}.bak`)
     const createCompressedFile = createWriteStream(`${file}.gz`)
 
@@ -25,11 +22,12 @@ const archiveFile = (file) => {
 
     unlink(file, (err) => {
         if (err) throw err
-        console.log('Original file was deleted!')
+        console.log(err.message)
     })
+
     unlink(`${file}.bak`, (err) => {
         if (err) throw err
-        console.log('Bak file was deleted!')
+        console.log(err.message)
     })
 }
 

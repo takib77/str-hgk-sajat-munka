@@ -26,4 +26,13 @@ const createDirAndFileStructure = () => {
         .catch((err) => console.error(err))
 }
 
-module.exports = createDirAndFileStructure
+
+const createDirs = (...dirNames) => {
+    dirNames.flat().map(dir => mkdir(dir))
+}
+
+const createFiles = (...fileNames) => {
+    fileNames.flat().map(file => writeFile(file, ''))
+}
+
+module.exports = { createDirAndFileStructure, createDirs, createFiles }
