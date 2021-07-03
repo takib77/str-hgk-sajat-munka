@@ -13,13 +13,12 @@ const logger = new Logger()
 logger.on('error', () => { })
 logger.on('success', () => { })
 
-logger.error('Hiba!')
-logger.success('Siker!')
-
 // const capitalizeFirstLetter = (str) => {
 //     const content = str.toString('utf8').split(' ')
-//     content.map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
-//     str.charAt(0).toUpperCase() + str.slice(1)
+//         .map(word => {
+//             return word[0].toUpperCase() + word.substring(1)
+//         }).join(' ')
+//     return content
 // }
 
 const textTrasformWithStream = (file) => {
