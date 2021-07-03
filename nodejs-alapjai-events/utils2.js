@@ -13,20 +13,22 @@ const logger = new Logger()
 logger.on('error', () => { })
 logger.on('success', () => { })
 
-// const capitalizeFirstLetter = (str) => {
-//     const content = str.toString('utf8').split(' ')
-//         .map(word => {
-//             return word[0].toUpperCase() + word.substring(1)
-//         }).join(' ')
-//     return content
-// }
+const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toLocaleUpperCase() + str.slice(1)
+}
 
 const textTrasformWithStream = (file) => {
     const readableStream = createReadStream(`${file}.txt`, {
         encoding: 'utf-8',
         highWaterMark: 1024
     })
-    readableStream.on('data', () => { })
+    readableStream.on('data', (chunk) => {
+        const content = chunk.split(' ')
+            .map(word => capitalizeFirstLetter(word)).join(' ')
+        console.log(content)
+    })
+
+    logger.emit('data', readableStream)
 
     const writeableStream = createWriteStream(`${file}Copy.txt`, 'utf-8')
 
@@ -40,4 +42,4 @@ const textTrasformWithStream = (file) => {
     readableStream.pipe(writeableStream)
 }
 
-module.exports = textTrasformWithStream
+module.exports = textTrasformWithStream()
