@@ -24,9 +24,9 @@
 
 5. Adj 3 különböző filmre legalább 2 különböző szavazatot (használd a $push operátort)!
 
-`db.movies.updateOne( {title:"E.T."}, {$push: {ratings: { $each: [2,4,1]}}})
-db.movies.updateOne( {title:"Shark"}, {$push: {ratings: { $each: [5,4,3]}}})
-db.movies.updateOne( {title:"Avatar"}, {$push: {ratings: { $each: [4,5,3]}}})`
+`db.movies.updateOne( {title:"E.T."}, {$push: {ratings: { $each: [2,4,1]}}})`
+`db.movies.updateOne( {title:"Shark"}, {$push: {ratings: { $each: [5,4,3]}}})`
+`db.movies.updateOne( {title:"Avatar"}, {$push: {ratings: { $each: [4,5,3]}}})`
 
 6. Adj hozzá minden filmhez egy „releaseYear” (megjelenés éve) mezőt: kezdetnek állíts be egy tetszőleges évet minden filmnek (pl.: 2000)!
 
