@@ -9,9 +9,9 @@
 
 4. Frissítsd a rendezők dokumentumait, helyezd el a „movies” listájukba a megfelelő filmek id-jait
 
-`db.directors.updateOne({name: "Steven Spielberg"}, {$push: {movies: {$each: [ObjectId("60dd65951e3e07ce4f86abd0"),ObjectId("60dd65951e3e07ce4f86abd1"), ObjectId("60dd65951e3e07ce4f86abd2"), ObjectId("60dd65951e3e07ce4f86abd3")]}}})`
-`db.directors.updateOne({name: "Clint Eastwood"}, {$push: {movies: {$each: [ObjectId("60dd65951e3e07ce4f86abd4"), ObjectId("60dd65951e3e07ce4f86abd5"), ObjectId("60dd65951e3e07ce4f86abd6")]}}})`
-`db.directors.updateOne({name: "James Cameron"}, {$push: {movies: {$each: [ObjectId("60dd65951e3e07ce4f86abd7"), ObjectId("60dd65951e3e07ce4f86abd8"), ObjectId("60dd65951e3e07ce4f86abd9")]}}})`
+`db.directors.updateOne({name: "Steven Spielberg"}, {$push: {movies: {$each: [ObjectId("60f2cd591e0914df32355e15"),ObjectId("60f2cd591e0914df32355e16"), ObjectId("60f2cd591e0914df32355e17"), ObjectId("60f2cd591e0914df32355e18")]}}})`
+`db.directors.updateOne({name: "Clint Eastwood"}, {$push: {movies: {$each: [ObjectId("60f2cd591e0914df32355e19"), ObjectId("60f2cd591e0914df32355e1a"), ObjectId("60f2cd591e0914df32355e1b")]}}})`
+`db.directors.updateOne({name: "James Cameron"}, {$push: {movies: {$each: [ObjectId("60f2cd591e0914df32355e1c"), ObjectId("60f2cd591e0914df32355e1d"), ObjectId("60f2cd591e0914df32355e1e")]}}})`
 
 5. Ha frissítetted a rendezőket, ellenőrzés gyanánt kérdezd le a dokumentumokat a „directors” listából (használd a pretty() metódust a szebb megjelenítéshez)!
 
