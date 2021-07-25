@@ -1,0 +1,95 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: ESZT (Egészségügyi Szuri Tár) API - COVID-19 Vaccine Registry
+  description: A COVID-19 elleni védőoltást kapott személyek nyilvántartása - A system for collecting and reporting COVID-19 vaccination data
+servers:
+  - url: http://localhost:3000
+paths:
+  /person/count:
+    get:
+      description: Returns the number of vaccinated Peoples
+      responses:
+        '200':
+          description: Number of Peoples returned successfully
+          content:
+            application/json:
+              schema:
+                type: integer
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /person/vaccinated:
+    get:
+      description: Returns the list of vaccinated Peoples
+      responses:
+        '200':
+          description: The list of vaccinated people returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/People'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /person/{id}/vaccinated:
+    get:
+      description: Returns the person with the given ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Person data returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/People'
+        '404':
+          description: Person with the give ID was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    People:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - vaccine
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        vaccine:
+          type: string
+    Error:
+      type: object
+      required:
+        - message
+        - has_error
+      properties:
+        message:
+          type: string
+        has_error:
+          type: boolean 
