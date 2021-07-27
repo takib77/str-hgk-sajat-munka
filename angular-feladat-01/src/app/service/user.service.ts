@@ -16,14 +16,12 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-  get(id?: number | string): Observable<User | User[]> {
-    let url = `${this.config.apiUrl}${this.entity}`;
+  getAll(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.config.apiUrl}${this.entity}`);
+  };
 
-    if (id) {
-      url += `/${id}`
-    };
-
-    return this.http.get<User[]>(url);
+  get(id?: number | string): Observable<User> {
+    return this.http.get<User>(`${this.config.apiUrl}${this.entity}/${id}`);
   };
 
 }

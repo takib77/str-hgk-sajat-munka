@@ -9,7 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'editor', component: EditorComponent },
+  { path: 'editor/:id', component: EditorComponent },
   { path: 'forbidden', component: ForbiddenComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '' },

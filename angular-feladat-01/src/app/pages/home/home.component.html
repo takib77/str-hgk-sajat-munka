@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th *ngFor="let col of tableText">{{col.label}}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList$ | async">
+                <td *ngFor="let col of tableText">{{user[col.key]}}</td>
+                <td>
+                    <a class="btn btn-secondary" routerLink="/editor/{{user.id}}">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
