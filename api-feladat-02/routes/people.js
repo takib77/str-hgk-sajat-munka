@@ -35,4 +35,23 @@ router.get('/:id/vaccinated', async (req, res) => {
     res.json(result);
 });
 
+/* Create a new People item */
+router.post('/person', async (req, res) => {
+    // const data = await peopleService.read();
+    // const newId = parseInt(data[length - 1].id, 10) + 1;
+    // const newPerson = { ...req.body, id: newId };
+    // data.push(newPerson);
+    // res.status(201);
+    // res.json(newPerson);
+
+    const data = await peopleService.read();
+    const newPerson = req.body;
+    newPerson.id = data[data.length - 1].id + 1;
+    data.push(newPerson);
+    res.status(201);
+    res.json(newPerson);
+
+    await peopleService.save(newPerson);
+});
+
 module.exports = router;

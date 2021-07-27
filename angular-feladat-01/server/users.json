@@ -1,0 +1,179 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Charlie",
+            "email": "seyden0@merriam-webster.com",
+            "password": "$2a$10$PeHa2ufY/Z8jVTEpxRpRxOFny7q/pnZgES245.8MiEHOXzgA4KdKe",
+            "role": 3
+        },
+        {
+            "id": 2,
+            "name": "Finn",
+            "email": "fupjohn1@paypal.com",
+            "password": "$2a$10$WzfznlCnutlTxDrG8USFcOx59tEL3zBr0KTdOaSLcWGS1tMZbeJpO",
+            "role": 1
+        },
+        {
+            "id": 3,
+            "name": "Nickey",
+            "email": "ntyt2@psu.edu",
+            "password": "$2a$10$Yx24OvnDoooftGwoInTMuOalJaTLBwYLBfWPoE2Ft0A7ddgy/Eml6",
+            "role": 3
+        },
+        {
+            "id": 4,
+            "name": "Goldia",
+            "email": "gbloodworthe3@mail.ru",
+            "password": "$2a$10$XCaD5qH6cy8b2Zs6.X21dON.WZXC.4uYI6UuGhyqSWzMSyGJ9fQQ6",
+            "role": 1
+        },
+        {
+            "id": 5,
+            "name": "Berti",
+            "email": "bfarthing4@nymag.com",
+            "password": "$2a$10$zl6J2sTRSOemUNRZ7Iq3DuxNZwCyi4AAOp6jB2V/U7bEM7OlJVqF2",
+            "role": 3
+        },
+        {
+            "id": 6,
+            "name": "Elihu",
+            "email": "elammie5@google.co.uk",
+            "password": "$2a$10$Yik3e5FNRzoeSkmaHXsOwu/OY34LzVLK.qikjnwuSELthvRYY2PIK",
+            "role": 1
+        },
+        {
+            "id": 7,
+            "name": "Misty",
+            "email": "mcomfort6@github.io",
+            "password": "$2a$10$ZrOZ40dYWInLc0zpQZ6Cg.CBqjuTRynd6ZaD8bJiEAYoeAnilCI6W",
+            "role": 2
+        },
+        {
+            "id": 8,
+            "name": "Shana",
+            "email": "sswyne7@latimes.com",
+            "password": "$2a$10$gNlsQbADZkQWP4KdP4Y8dOUPnLApUf81vyQe6Cw8rIxPgJmrsODtq",
+            "role": 1
+        },
+        {
+            "id": 9,
+            "name": "Wake",
+            "email": "wpickworth8@about.com",
+            "password": "$2a$10$33qbZfZnTvwP4lK3gHwOWOJmQyVFyBBkcXvRa75L.GffaQzpbiM0u",
+            "role": 2
+        },
+        {
+            "id": 10,
+            "name": "Marcellus",
+            "email": "mmelchior9@weibo.com",
+            "password": "$2a$10$ChNaXJ53hTt09Fgiu83U7.1jxyLUkhLi1PceeCr3RgRq8auXBdWOy",
+            "role": 2
+        },
+        {
+            "id": 11,
+            "name": "Jorgan",
+            "email": "jperrycosta@whitehouse.gov",
+            "password": "$2a$10$qKO3YDLLxTTJ2C3/y7RCUev/6k3nfcnVrtds5R7VCeH2srRL5WbYG",
+            "role": 3
+        },
+        {
+            "id": 12,
+            "name": "Rossy",
+            "email": "rellicottb@tinyurl.com",
+            "password": "$2a$10$krfOmXKtbKhEqvZ7iTHR9uHyjWOKdo5QbRCGve3ueTyd1lgahcweS",
+            "role": 3
+        },
+        {
+            "id": 13,
+            "name": "Simonne",
+            "email": "shourstonc@constantcontact.com",
+            "password": "$2a$10$PcRbxUXOOzFlLNFS3BK8p.Uq6/LomtuZxO8oxEn2xRxbGlWxLTcTG",
+            "role": 3
+        },
+        {
+            "id": 14,
+            "name": "Darcy",
+            "email": "deverettd@delicious.com",
+            "password": "$2a$10$zQOYdjtr0pOVudqMnu.G.uEK3IdQ4SGHVkFUrsiplwuKiFWIJe18O",
+            "role": 1
+        },
+        {
+            "id": 15,
+            "name": "Tuck",
+            "email": "twallase@odnoklassniki.ru",
+            "password": "$2a$10$hYfGi77WgLdUd4aoo9WwjeVzTFxf9sfoA8adgtzoDdTcF4oWNDJR2",
+            "role": 3
+        },
+        {
+            "id": 16,
+            "name": "Piggy",
+            "email": "pjefferiesf@constantcontact.com",
+            "password": "$2a$10$IDE0nVFotJlYtFB9tV6nJu/nxMhthQqawZgeSFDbQxOc4zW9rhEO.",
+            "role": 1
+        },
+        {
+            "id": 17,
+            "name": "Bob",
+            "email": "dmowatg@cisco.com",
+            "password": "$2a$10$YCkHdz8M86Ts26FDIVJM7.wmADU3Zwb5AF3ooulapRwcfFTukMgqu",
+            "role": "1"
+        },
+        {
+            "id": 18,
+            "name": "Colin",
+            "email": "cnolinh@businessweek.com",
+            "password": "$2a$10$B5Yd7KqVrq2bHD25Wqk0M.t64hmIXyQWysxIvm7JK7xZRd1w9VXAC",
+            "role": 1
+        },
+        {
+            "id": 19,
+            "name": "Anallese",
+            "email": "anoblesi@jimdo.com",
+            "password": "$2a$10$F69RWlaK2gqCKWlS4ya4bey7fA/nwXxoCvkBMymn4yRIquElfaOQ.",
+            "role": 3
+        },
+        {
+            "id": 20,
+            "name": "Wendell",
+            "email": "wknokj@blinklist.com",
+            "password": "$2a$10$EFOsSYZJzOYk1GZkYaKu2uQ8aOSZ5O60LnsA.3Pr/m0L5pOnTuEhG",
+            "role": 1
+        },
+        {
+            "id": 21,
+            "name": "Beckie",
+            "email": "bemmertk@yandex.ru",
+            "password": "$2a$10$bn1PObyAefhkkrtirJZuzeGbqeZOfvjbJw.ijjM4fauoAi7JZpYMS",
+            "role": 2
+        },
+        {
+            "id": 22,
+            "name": "Basile",
+            "email": "bdainesl@google.cn",
+            "password": "$2a$10$ctoztby6fPhpVOirXV6w3uyX/P/KVMsUks1l8c5qHGF6aShv5XEG2",
+            "role": 2
+        },
+        {
+            "id": 23,
+            "name": "Lee",
+            "email": "lgordenm@unc.edu",
+            "password": "$2a$10$vHKA9CvDE8cwAuzW6qlc6eY3uaCjkpIBEukhK9xXqPDpSu0qhsfhC",
+            "role": 2
+        },
+        {
+            "id": 24,
+            "name": "Berry",
+            "email": "bsargersonn@arizona.edu",
+            "password": "$2a$10$y/iEi/iSzwNwCTeCpMJKRe9yGIsMRZdlfHwNJrBOzFU9KED.wMeaq",
+            "role": 3
+        },
+        {
+            "id": 25,
+            "name": "Simonette",
+            "email": "sscamerdeno@gnu.org",
+            "password": "$2a$10$v1Tab2eIpujIS8TtIWT6nO3/Yit3oOmjeLUppOsXlZk18evsmGDmS",
+            "role": 2
+        }
+    ]
+}
