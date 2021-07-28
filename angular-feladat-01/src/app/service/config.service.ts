@@ -12,7 +12,7 @@ export class ConfigService {
     // { label: 'Editor', href: '/editor', role: 2 },
     { label: 'Admin', href: '/admin', role: 3 },
     { label: 'Forbidden', href: '/forbidden', role: 1 },
-    { label: 'Login', href: '/login', role: 1 },
+    // { label: 'Login', href: '/login', role: 1 },
   ];
 
   userColumns: { key: string, label: string }[] = [
