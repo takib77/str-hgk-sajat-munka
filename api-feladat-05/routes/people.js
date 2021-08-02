@@ -2,30 +2,32 @@ const express = require('express');
 const router = express.Router();
 const createError = require("http-errors");
 
-const peopleService = require('../service/people.service');
+const People = require('../models/people.model');
 
 /* GET users */
 router.get('/', async (req, res, next) => {
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
+
     res.json(data);
 });
 
 /* GET count */
 router.get('/count', async (req, res, next) => {
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
     const count = data.filter(p => p.vaccine !== 'none').length;
+
     res.json(count);
 });
 
 /* GET vaccinated */
 router.get('/vaccinated', async (req, res, next) => {
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
@@ -41,7 +43,7 @@ router.get('/vaccinated', async (req, res, next) => {
 /* GET vaccinated vaccine name/false */
 router.get('/:id/vaccinated', async (req, res, next) => {
     const { id } = req.params;
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
@@ -51,6 +53,7 @@ router.get('/:id/vaccinated', async (req, res, next) => {
         res.sendStatus(404);
         return next(new createError.NotFound("Person is not found!"));
     }
+
     const result = person.vaccine === 'none' ? false : person.vaccine;
     res.json(result);
 });
@@ -62,7 +65,7 @@ router.post('/', async (req, res, next) => {
         return next(new createError.BadRequest("Missing properties!"));
     }
 
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
@@ -71,7 +74,6 @@ router.post('/', async (req, res, next) => {
     newPerson.id = data[data.length - 1].id + 1;
     data.push(newPerson);
 
-    await peopleService.save(data);
     res.status(201);
     res.json(newPerson);
 });
@@ -85,7 +87,7 @@ router.put('/:id/:vaccine', async (req, res, next) => {
         return next(new createError.BadRequest("Missing properties!"));
     }
 
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
@@ -94,7 +96,6 @@ router.put('/:id/:vaccine', async (req, res, next) => {
     data[index].id = id;
     data[index].vaccine = vaccine;
 
-    await peopleService.save(data);
     res.json(data[index]);
 });
 
@@ -105,7 +106,7 @@ router.delete('/:vaccine', async (req, res, next) => {
     if (!vaccine) {
         return next(new createError.NotFound("Vaccine not found!"));
     }
-    const data = await peopleService.read();
+    const data = await People.find();
     if (!data) {
         return next(new createError.NotFound("Database is not found!"));
     };
@@ -115,7 +116,6 @@ router.delete('/:vaccine', async (req, res, next) => {
         }
     });
 
-    await peopleService.save(data);
     res.json({});
 });
 
