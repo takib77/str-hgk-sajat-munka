@@ -9,7 +9,7 @@ const read = async () => {
 }
 
 const save = async (list) => {
-    const newList = JSON.stringify(list);
+    const newList = JSON.stringify(list, null, 4);
     await fsp.writeFile(jsonPath, newList);
 }
 
