@@ -1,8 +1,8 @@
 <div class="container">
   <div class="col-6 col-offset-3 mx-auto my-3 text-center">
-    <a *ngFor="let text of nav" class="btn btn-primary mx-1" [href]="text.href">{{text.label}}</a>
+    <a *ngFor="let text of nav" class="btn btn-primary mx-1" [routerLink]="text.href">{{text.label}}</a>
     <a *ngIf="user" class="mr-1">
-      <span>Hi {{ user?.name }}!</span>
+      <span class="btn btn-info">Hi {{ user?.name }}!</span>
     </a>
     <a *ngIf="!user">
       <a routerLink="/login" class="btn btn-success"> Login </a>

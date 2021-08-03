@@ -1,29 +1,28 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Router } from '@angular/router';
-import { User } from '../model/user';
+import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RoleGuardService {
-
-  currentUser: User | null = null;
+export class RoleGuardService implements CanActivate {
 
   constructor(
-    private auth: AuthService,
-    private router: Router,
+    public auth: AuthService,
+    public router: Router,
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
-    this.currentUser = this.auth.currentUserValue;
     const expectedRole = route.data.expectedRole;
 
-    if (!this.currentUser || this.currentUser.role < expectedRole) {
+    if (
+      !this.auth.currentUserValue ||
+      this.auth.currentUserValue.role && Number(this.auth.currentUserValue.role) < expectedRole
+    ) {
       this.router.navigate(['forbidden']);
       return false;
     }
+
     return true;
   }
-
 }

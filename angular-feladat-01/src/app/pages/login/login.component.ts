@@ -21,17 +21,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   onLogin(ngForm: NgForm): void {
-    const currentUser = this.auth.currentUserValue;
     this.auth.login(ngForm.value).toPromise().then(
       response => {
-        if (currentUser) {
+        if (this.auth.currentUserValue) {
           this.router.navigate(['/']);
         }
       },
       err => {
-        this.serverError = err.message;
+        this.serverError = err.error;
         const to = setTimeout(() => {
           clearTimeout(to);
           this.serverError = '';
